@@ -45,4 +45,25 @@ http://192.168.1.10/rf?D=4&t=187&id=28016&on=1 socket 1 on
 
 http://192.168.1.10/rf?D=4&t=187&id=25018&on=1 socket 1 on
 
+Or edit the included .html with your ESP device IP address and use to control several sockets from a browser 
+(requires each socket to be paired with the transmitted code from the .html)
+
+If you have the means to capture your 433mhz remote codes, you can emulate the same code via http and use both remote control and browser to operate the same sockets.
+
+A quirk of the original code is that the transmitted ID code gets inverted. To find the required code to transmit, first capture the remote on or off that you wish to emulate.
+
+E.G.
+
+Socket 1 On = Binary: 000101010101110100000011
+
+Remove the last 4 bits: 00010101010111010000
+
+Use the web UI of the ESP device to transmit the on signal with ID 87504 and again capture the transmitted code.
+
+ESP transmission = Binary: 10111010101010000011
+
+Again remove the last 4 bits: 1011101010101000 - [0011] and convert the remaining 20 bits to decimal = 47784
+
+47784 is the ID we need to transmit to emulate the remote control.
+
 Original code here: https://github.com/bitluni/EspRfRemote
