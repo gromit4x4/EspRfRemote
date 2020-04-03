@@ -31,18 +31,18 @@ A simple UI will show up. You can control the parameters and the corresponding u
 
 The original code has been modified to suit Mercury remote sockets set 350.115UK
 
-The Mercury sockets require the same preamble and ID code but switch on/off differently.
+The Mercury sockets require the same preamble and ID code format but switch on/off differently.
 
 Changes have been made to omit the on/off bit and channel select option as the Mercury sockets don't use them.
 Mercury use a static on/off code and a unique ID for each socket.
 
 The output is now Pin D4, t 187, ID, 1/0 for on/off.
 
-To set several sockets select a different ID for each (increment or decrement the ID) and copy the resulting URL.
+To set several sockets select a different ID for each (increment or decrement the ID idealy by more than 1) and copy the resulting URL.
 E.G: 
 
 http://192.168.1.10/rf?D=4&t=187&id=28016&on=1 socket 1 on
 
-http://192.168.1.10/rf?D=4&t=187&id=28017&on=1 socket 1 on
+http://192.168.1.10/rf?D=4&t=187&id=25018&on=1 socket 1 on
 
 Original code here: https://github.com/bitluni/EspRfRemote
