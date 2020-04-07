@@ -43,7 +43,7 @@ E.G:
 
 http://192.168.1.10/rf?D=4&t=187&id=28016&on=1 socket 1 on
 
-http://192.168.1.10/rf?D=4&t=187&id=25018&on=1 socket 1 on
+http://192.168.1.10/rf?D=4&t=187&id=25018&on=1 socket 2 on
 
 Or edit the included .html with your ESP device IP address and use to control several sockets from a browser 
 (requires each socket to be paired with the transmitted code from the .html)
